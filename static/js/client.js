@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("https://quick-chat-socket-server.herokuapp.com");
 
 let form = document.getElementById('sendContainer');
 let message = document.getElementById('message');
