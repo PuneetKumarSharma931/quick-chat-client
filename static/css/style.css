@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&family=Roboto+Condensed&family=Varela+Round&display=swap');
+
+.myLogo {
+
+    display: block;
+    margin: auto;
+    height: 60px;
+    margin-top: 30px;
+}
+
+body {
+
+    background: linear-gradient(white, rgb(153, 153, 243));
+    height: 100vh;
+}
+
+.container {
+
+    background-color: rgb(245, 176, 176);
+    width: 58vw;
+    height: 65vh;
+    margin: auto;
+    margin-top: 27px;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 0;  
+    background: transparent; 
+}
+
+.message {
+
+    background-color: rgb(161, 161, 161);
+    width: 27%;
+    padding: 10px;
+    margin: 14px 14px;
+    border: 2px solid black;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.right {
+
+    float: right;
+    clear: both;
+}
+
+.left {
+
+    float: left;
+    clear: both;
+
+}
+
+#sendContainer {
+
+    text-align: center;
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 10px;
+}
+
+#message {
+
+    width: 53%;
+    height: 30px;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 19px;
+}
+
+.btn {
+
+    width: 6%;
+    height: 42px;
+    font-size: 18px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
