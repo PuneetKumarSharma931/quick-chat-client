@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +10,53 @@
     <script defer src="static/js/client.js"></script>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
-<nav>
-    <img src="static/media/logo.png" class="myLogo" alt="Chat App Logo">
-</nav>
 
-<div class="container">
-</div>
+    <div class="chatRoom">
 
-<div class="send">
+        <nav>
+            <img src="static/media/logo.png" class="myLogo" alt="Chat App Logo">
+        </nav>
 
-    <form action="#" id="sendContainer">
-        <input type="text" name="message" id="message">
-        <button class="btn" type="submit">Send</button>
-    </form>
-</div>
-    
+        <h1> Welcome to Quick Chat</h1>
+
+        <div class="container">
+        </div>
+
+        <div class="send">
+
+            <form action="#" id="sendContainer">
+                <input type="text" name="message" id="message">
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="popup">
+
+        <div class="popupContent">
+
+            <div class="logo">
+                <img src="static/media/logo.png" alt="Quick Chat logo">
+            </div>
+
+            <h2>Enter Name to Join Chat</h2>
+
+            <div class="myInput" id="myInput">
+                <input type="text" name="name" id="name" placeholder="Input your Name">
+            </div>
+
+
+            <div class="button">
+                <button class="joinBtn">Join!</button>
+            </div>
+
+        </div>
+    </div>
+
+
 </body>
+
 </html>
