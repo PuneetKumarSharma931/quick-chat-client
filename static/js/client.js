@@ -3,6 +3,7 @@ const socket = io("https://quick-chat-socket-server.herokuapp.com");
 let form = document.getElementById('sendContainer');
 let message = document.getElementById('message');
 let messageContainer = document.querySelector(".container");
+let sendBtn = document.getElementsByClassName('btn')[0];
 
 let audioElement = new Audio('static/media/sound.mp3');
 
@@ -19,12 +20,27 @@ const getName = new Promise((resolve, reject) => {
         popup.style.display = 'block';
         chats.classList.toggle('active');
 
+        join.disabled = true;
+
+        input.addEventListener('input', ()=>{
+
+            if(input.value.length<=1) {
+
+                join.disabled = true;
+            }
+            else{
+
+                join.disabled = false;
+            }
+        });
+
         join.addEventListener('click', () => {
 
             name = input.value;
             popup.style.display = 'none';
             chats.classList.toggle('active');
         });
+
     }
 
     setInterval(() => {
@@ -94,6 +110,8 @@ form.addEventListener('submit', (e) => {
     append('You', messageInp, 'right');
     message.value = "";
     socket.emit('send', messageInp);
+
+    sendBtn.disabled = true;
 });
 
 socket.on('received', data => {
@@ -104,6 +122,20 @@ socket.on('received', data => {
 socket.on('left', name => {
 
     appendLeft(name);
+});
+
+sendBtn.disabled = true;
+
+message.addEventListener('input',()=>{
+
+    if(message.value.length===0) {
+
+        sendBtn.disabled = true;
+    }
+    else{
+
+        sendBtn.disabled = false;
+    }
 });
 
 
